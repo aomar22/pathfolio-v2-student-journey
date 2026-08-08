@@ -392,7 +392,7 @@ body {
 .card {
   border-radius: 20px;
   padding: 16px;
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  transition: box-shadow 0.24s ease;
   position: relative;
   overflow: hidden;
 }
@@ -409,7 +409,6 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-3px);
   box-shadow:
     0 22px 48px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -879,7 +878,7 @@ body {
 .thumb3 { background: linear-gradient(140deg, #26c86d, #159f4f); }
 .thumb4 { background: linear-gradient(140deg, #f59e0b, #b9780b); }
 
-.radar-card canvas {
+.radar-card .radar-visual {
   width: 100%;
   margin-top: 6px;
   border-radius: 14px;

@@ -37,8 +37,6 @@
             <a href="ai-reflection-guide.html" class="nav-item active"><i data-lucide="sparkles"></i><span>AI Reflection Workspace</span></a>
             <a href="reflections-log.html" class="nav-item"><i data-lucide="notebook-pen"></i><span>Reflections</span></a>
             <a href="portfolio-builder.html" class="nav-item"><i data-lucide="briefcase-business"></i><span>Portfolio Builder</span></a>
-            <!-- <a href="skills.html" class="nav-item"><i data-lucide="badge-check"></i><span>Skills</span></a> -->
-            <!-- <a href="#" class="nav-item"><i data-lucide="chart-column"></i><span>Analytics</span></a> -->
             <a href="analytics.html" class="nav-item"><i data-lucide="chart-column"></i><span>Analytics</span></a>
             <p class="nav-group-label nav-utility">Utilities</p>
             <a href="#" class="nav-item"><i data-lucide="settings"></i><span>Settings</span></a>
@@ -95,6 +93,7 @@
             <select id="projectSelect" class="project-select" aria-label="Select current project for reflection">
               <option value="">Select a project</option>
             </select>
+            
           </div>
 
           <div class="project-status-inline">
@@ -139,40 +138,6 @@
           </div>
         </section>
 
-        <section class="card glass-card guide-featured requires-project" aria-label="Continue reflection">
-          <div class="guide-featured-main">
-            <div class="card-head">
-              <h3>Continue Reflection</h3>
-              <span class="chip blue" id="featuredProgressChip">70% Complete</span>
-            </div>
-            <p class="muted" id="featuredProjectLabel">Project: -</p>
-
-            <div class="guide-progress-meta">
-              <div>
-                <p>Progress</p>
-                <strong id="featuredProgressText">70%</strong>
-              </div>
-              <div class="time-remaining">
-                <p>Estimated Time Remaining</p>
-                <strong id="featuredTime">8 minutes</strong>
-              </div>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill" id="featuredProgressFill" style="--value:70%"></div>
-            </div>
-
-            <div class="guide-featured-actions">
-              <button class="primary-btn" id="continueReflectionBtn">Continue Reflection</button>
-              <button class="secondary-guide-btn" id="secondaryStartBtn">Start New Reflection</button>
-            </div>
-          </div>
-          <div class="guide-featured-visual" aria-hidden="true">
-            <div class="orb a"></div>
-            <div class="orb b"></div>
-            <div class="stack"><span></span><span></span><span></span></div>
-          </div>
-        </section>
-
         <section class="card glass-card guide-stepper-card requires-project" aria-label="Reflection steps">
           <div class="card-head">
             <h3>Reflection Steps</h3>
@@ -202,13 +167,6 @@
                 rows="8"
               ></textarea>
 
-              <!-- <div class="reflection-tools-head">
-                <h4>AI Assistance</h4>
-                <button class="chip-action-btn" id="toggleSuggestionsBtn" aria-pressed="false">
-                  Toggle AI Suggestions
-                </button>
-              </div> -->
-
               <div class="assist-chips" id="assistChipsWrap">
                 <button class="assist-chip" data-action="Explain Concepts">Explain Concepts</button>
                 <button class="assist-chip" data-action="Suggest an Answer Structure">Suggest an Answer Structure</button>
@@ -223,43 +181,6 @@
               </div>
             </div>
           </article>
-
-          <!-- <article class="card glass-card insights-card" aria-label="AI insights">
-            <div class="card-head">
-              <h3>AI Insights</h3>
-              <button class="section-toggle icon-btn" data-target="insightsBody" aria-expanded="true" aria-label="Collapse AI insights section">
-                <i data-lucide="chevron-up"></i>
-              </button>
-            </div>
-
-            <div class="section-body" id="insightsBody">
-              <div class="insight-group">
-                <h4>Detected Skills</h4>
-                <ul>
-                  <li>Backend Development</li>
-                  <li>REST API Design</li>
-                  <li>Database Design</li>
-                  <li>Problem Solving</li>
-                </ul>
-              </div>
-
-              <div class="insight-group">
-                <h4>Suggested Improvements</h4>
-                <ul>
-                  <li>Add authentication</li>
-                  <li>Improve API validation</li>
-                  <li>Deploy to Azure</li>
-                  <li>Write unit tests</li>
-                </ul>
-              </div>
-
-              <div class="confidence-wrap">
-                <span>Confidence</span>
-                <strong>92%</strong>
-              </div>
-              <p class="confidence-note">Based on your reflection and project details.</p>
-            </div>
-          </article> -->
         </section>
 
         <section class="guide-secondary-grid requires-project">
@@ -272,54 +193,50 @@
             </div>
 
             <div class="section-body" id="learningBody">
-              <div class="expand-item" data-expand-item>
+              <div class="expand-item">
                 <div class="expand-head">
                   <div>
                     <h4>Learn JWT Authentication</h4>
                     <p>Difficulty: Medium · 2 hours</p>
                   </div>
-                  <button class="expand-btn" data-expand-toggle aria-expanded="false">Learn More</button>
                 </div>
-                <div class="expand-content" hidden>
+                <div class="expand-content">
                   Practice token generation, middleware protection, and secure session expiry patterns.
                 </div>
               </div>
 
-              <div class="expand-item" data-expand-item>
+              <div class="expand-item">
                 <div class="expand-head">
                   <div>
                     <h4>Explore Docker Containers</h4>
                     <p>Difficulty: Medium · 3 hours</p>
                   </div>
-                  <button class="expand-btn" data-expand-toggle aria-expanded="false">Learn More</button>
                 </div>
-                <div class="expand-content" hidden>
+                <div class="expand-content">
                   Containerize your API and run local development with environment-specific configuration.
                 </div>
               </div>
 
-              <div class="expand-item" data-expand-item>
+              <div class="expand-item">
                 <div class="expand-head">
                   <div>
                     <h4>Practice Unit Testing</h4>
                     <p>Difficulty: Easy · 90 minutes</p>
                   </div>
-                  <button class="expand-btn" data-expand-toggle aria-expanded="false">Learn More</button>
                 </div>
-                <div class="expand-content" hidden>
+                <div class="expand-content">
                   Build test coverage for routes, validation logic, and failure states with mocked dependencies.
                 </div>
               </div>
 
-              <div class="expand-item" data-expand-item>
+              <div class="expand-item">
                 <div class="expand-head">
                   <div>
                     <h4>Deploy APIs using Azure App Service</h4>
                     <p>Difficulty: Advanced · 4 hours</p>
                   </div>
-                  <button class="expand-btn" data-expand-toggle aria-expanded="false">Learn More</button>
                 </div>
-                <div class="expand-content" hidden>
+                <div class="expand-content">
                   Publish your service, connect environment variables, and monitor deployments in production.
                 </div>
               </div>
@@ -476,40 +393,6 @@
               <div class="ai-review-box" id="aiReviewBox" hidden aria-live="polite"></div>
             </div>
           </article>
-
-          <!-- <article class="card glass-card history-card" aria-label="Reflection history">
-            <div class="card-head">
-              <h3>Reflection History</h3>
-              <button class="section-toggle icon-btn" data-target="historyBody" aria-expanded="true" aria-label="Collapse reflection history section">
-                <i data-lucide="chevron-up"></i>
-              </button>
-            </div>
-
-            <div class="section-body" id="historyBody">
-              <div class="history-entry-list">
-                <div class="history-entry">
-                  <div>
-                    <h4>Technical Learning</h4>
-                    <p>Jul 20</p>
-                  </div>
-                  <div class="history-entry-side">
-                    <span class="chip success">Completed</span>
-                    <button class="table-action-btn" data-open-reflection="Inventory API">View Reflection</button>
-                  </div>
-                </div>
-                <div class="history-entry">
-                  <div>
-                    <h4>Career Reflection</h4>
-                    <p>Jul 25</p>
-                  </div>
-                  <div class="history-entry-side">
-                    <span class="chip warning">Draft</span>
-                    <button class="table-action-btn" data-continue-reflection="portfolio-cms">Continue</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article> -->
         </section>
       </main>
     </div>
