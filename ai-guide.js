@@ -268,6 +268,13 @@ const selectProject = (projectId) => {
 
 const handleExpanders = () => {
   document.querySelectorAll("[data-expand-toggle]").forEach((btn) => {
+    const parent = btn.closest("[data-expand-item]");
+    const content = parent ? parent.querySelector(".expand-content") : null;
+    if (content) {
+      content.removeAttribute("hidden");
+      btn.setAttribute("aria-expanded", "true");
+    }
+
     btn.addEventListener("click", () => {
       const parent = btn.closest("[data-expand-item]");
       const content = parent ? parent.querySelector(".expand-content") : null;
@@ -306,8 +313,9 @@ const handleSectionToggles = () => {
     if (!target) {
       return;
     }
+    
 
-    setSectionState(btn, target, false);
+    setSectionState(btn, target, true);
 
     btn.addEventListener("click", () => {
       const isExpanded = btn.getAttribute("aria-expanded") === "true";
