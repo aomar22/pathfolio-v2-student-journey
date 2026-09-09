@@ -7,21 +7,6 @@
 ![CSS](https://img.shields.io/badge/CSS3-Styling-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-blue)
 
----
-
-## 📌 About the Project
-
-**PathFolio** was a product idea proposed by **Amany Omar** to the project team for the DEN502 Entrepreneurship course at Seneca Polytechnic.
-
-The concept was then explored and developed collaboratively as a group entrepreneurship project.
-
-> **Status:** Academic prototype completed in 2026 and maintained for portfolio demonstration and technical reference.
-
----
-
-## 💻 About This Repository
-
-This repository contains the **front-end web prototype only**, built with HTML, CSS, and JavaScript.
 
 # PathFolio
 
